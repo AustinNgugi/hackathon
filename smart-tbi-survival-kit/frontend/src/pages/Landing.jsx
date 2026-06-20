@@ -93,8 +93,7 @@ export default function Landing() {
       </div>
 
       {/* Sticky navigation - Changed theme to "dark" for better visibility on the dark background */}
-      <div className="relative z-10">
-        {/* Sticky navigation */}
+    {/* Sticky navigation */}
 <CardNav
   logo="⚡ TBI KIT"
   logoAlt="SMART TBI Survival Kit"
@@ -106,7 +105,6 @@ export default function Landing() {
   ease="power3.out"
   theme="dark"  
 />
-      </div>
 
       {/* All page content renders on top of the canvas */}
       <div className="relative z-10">
