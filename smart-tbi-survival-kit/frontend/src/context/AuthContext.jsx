@@ -4,7 +4,10 @@ import axios from 'axios';
 const AuthContext = createContext(null);
 
 // Configured axios instance — all API calls go through /api (Vite proxy)
-const api = axios.create({ baseURL: '/api' });
+const API_URL = import.meta.env.VITE_API_URL || '';
+const api = axios.create({ 
+  baseURL: API_URL ? `${API_URL}/api` : '/api' 
+});
 
 // Attach JWT token to every request automatically
 api.interceptors.request.use((config) => {
